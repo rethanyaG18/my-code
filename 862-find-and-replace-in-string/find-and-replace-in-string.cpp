@@ -3,7 +3,6 @@ public:
     string findReplaceString(string s, vector<int>& indices, vector<string>& sources, vector<string>& targets) {
 
         unordered_map < int , pair<int,string> > map;
-        // index - < length , string > 
         for (int i = 0 ; i < indices.size() ; i++ ){
             if ( sources[i] == s.substr(indices[i] , sources[i].size())){
                 map[indices[i]] = {sources[i].size() , targets[i]};
